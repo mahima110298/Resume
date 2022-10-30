@@ -53,6 +53,16 @@
   \item\small{{#1 \vspace{-2pt}}
   }
 }
+
+\newcommand{\resumeSubheadingWithDescription}[5]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-1pt}
+    \small#5
+}
+
 \newcommand{\resumeSubheading}[4]{
   \vspace{-1pt}\item
     \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
@@ -60,19 +70,11 @@
       \textit{\small#3} & \textit{\small #4} \\
     \end{tabular*}\vspace{-5pt}
 }
-\newcommand{\resumeEducationSubheading}[5]{
-  \vspace{-1pt}\item
-    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-      \textbf{#1} & #2 \\
-      \textit{\small#3} & \textit{\small #4}\vspace{-2pt} \\
-      \footnotesize#5 \\
-    \end{tabular*}\vspace{-5pt}
-}
 
 \newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
 
 \renewcommand{\labelitemii}{$\circ$}
-
+ 
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
 \newcommand{\resumeItemListStart}{\begin{itemize}}
@@ -93,8 +95,9 @@
 
 %-----------EDUCATION-----------------
 \section{Education}
+
   \resumeSubHeadingListStart
-    \resumeEducationSubheading
+    \resumeSubheadingWithDescription
       {Motilal Nehru National Institute of Technology}{Prayagraj, India}
       {B.Tech. in Computer Science and Engineering;  CGPA: 8.21/10}{July 2015 - May 2019}
       {Related courswork: Operating systems, Distributed systems, Databases, Object oriented modeling}

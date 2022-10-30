@@ -1,0 +1,173 @@
+%-------------------------
+% Resume in Latex
+% Author : Mahima Sachan
+% Website: https://github.com/mahima110298/Resume/new/main
+% Reference: Sourabh Bajaj Resume (https://github.com/sb2nov/resume/blob/master/sourabh_bajaj_resume.tex)
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[pdftex]{hyperref}
+\usepackage{fancyhdr}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.375in}
+\addtolength{\evensidemargin}{-0.375in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \textbf{#1}{: #2 \vspace{-2pt}}
+  }
+}
+\newcommand{\listItem}[1]{
+  \item\small{{#1 \vspace{-2pt}}
+  }
+}
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+\newcommand{\resumeEducationSubheading}[5]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4}\vspace{-2pt} \\
+      \footnotesize#5 \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+\newcommand{\resumeListItem}[1]{\listItem{#1}\vspace{-4pt}}
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{\Large Mahima Sachan} & Email : \href{mailto:mahimasachan@gmail.com}{mahimasachan@gmail.com}\\
+  \href{https://www.linkedin.com/in/mahimasachan}{Linkedin: mahimasachan} & Mobile : +91 - 72330 93831 \\
+\end{tabular*}
+
+
+%-----------EDUCATION-----------------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeEducationSubheading
+      {Motilal Nehru National Institute of Technology}{Prayagraj, India}
+      {B.Tech. in Computer Science and Engineering;  CGPA: 8.21/10}{July 2015 - May 2019}
+      {Related courswork: Operating systems, Distributed systems, Databases, Object oriented modeling}
+    \resumeSubheading
+      {Kendriya Vidyalaya No - 1, Armapur}{Kanpur, India}
+      {Class XII;  Percentage: 96.6\%}{Apr. 2014 - Jun. 2015}
+  \resumeSubHeadingListEnd
+
+
+%-----------EXPERIENCE-----------------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Microsoft}{Hyderabad, India}
+      {Software Engineer II}{Dec. 2020 - Present}
+      \resumeItemListStart
+        \resumeItem{AI Graph}
+          {Made the service memory efficient by analyzing heap traces and filtering out scopes for improvement, and then made use of various optimized data structures and algorithms to save memory usage. Also ingested data from various sources into the graph to support additional use cases. \textbf{[ML, C\#]}}
+        \resumeItem{Voice access}
+          {Voice access is an accessibility product that comes with Windows 11. I single-handedly worked on the UI for the first run experience of voice access. Designed the UI to be scalable to different screen sizes and resolutions, supported contrast themes and made it accessible by keyboard and screen readers. Collaborated with Design and PM team. Resolved bugs from accessibility, craftmanship reviews and customers. \textbf{[C++/WinRT]}}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Salesforce}{Hyderabad, Inida}
+      {Member of Technical Staff}{Jun. 2019 - Dec. 2020}
+      \resumeItemListStart
+        \resumeItem{MTA API}
+          {MTA API is a set of REST APIs which uses the existing sprocs to automate the manual workflow involved in using the UI. It also provides better guardrail over the existing functionality. This helped in $\sim$80\% savings in operations time i.e. reduction from 5 minutes to $\leq$ 1 minute per server (for retirement of $\sim$2K CentOS 6 servers). \textbf{[Go]}}
+        \resumeItem{Commvault Patching Tool}
+          {The Commvault Patching Tool is a UI application which facilitates operations to be performed before and after patching through a simple click of a button. This automation eliminated manual involvement in patching of $\sim$600 Commvault servers (from 5 engineer days to 0). \textbf{[Powershell]}}
+        \resumeItem{SRMS on EU Region}
+          {Provided support for SRMS in EU Region in a way that it doesn’t violate GDPR. Keeping in mind the user experience so the user doesn’t have to keep the two instances of SRMS open for NA and EU regions. It self redirects to the desired region’s frontend depending on the user inputs. \textbf{[ASP.NET, C\#]}}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+
+%-----------PROJECTS-----------------
+\section{Projects}
+  \resumeSubHeadingListStart
+    \resumeSubItem{Home Automation}
+      {Home automation will control home appliances in manual and automatic mode as per user choice. Placed sensors like temperature, light and PIR to record conditions of surroundings. Algorithms can make decisions based on the data in automatic mode. User will always get to know the status of home appliances via an app. \textbf{[Raspberry Pi, Python]}}
+    \resumeSubItem{News Classification}
+      {Classification of news into 10 different categories. Comparison of classification using inbuilt Multinomial Naive Bayes and self-implemented Naive Bayes. Metric for comparison are classification report and confusion matrix. \textbf{[ML, Python]}}
+    \resumeSubItem{Psych Phrase Game}
+      {A multiplayer game using java RMI. One server multiple client Architecture. Database implemented. \textbf{[Core Java]}}
+  \resumeSubHeadingListEnd
+
+
+%--------PROGRAMMING SKILLS------------
+\section{Skills Summary}
+ \resumeSubHeadingListStart
+   \resumeSubItem{Languages}
+      {C\#, C++, Java, SQL, Python, Go, Powershell}
+    \resumeSubItem{Technologies}
+      {Rest API, Micro services, ASP.NET}
+    \resumeSubItem{Tools}
+      {Visual studio, Git, Azure Dev Ops, Docker, Kubernetes, Unity 3D game engine}
+ \resumeSubHeadingListEnd
+
+
+%--------ACHIEVEMENTS------------
+\section{Achievements}
+ \resumeSubHeadingListStart
+   \resumeListItem
+      {Received the Star Award for quality and artisanship from leaders at WDX India for my work in voice access.}
+    \resumeListItem
+      {Received spot bonus from the director of Marketing Cloud India for demonstrating ownership and leadership in the first FTE opportunity.}
+    \resumeListItem
+      {Secured 99.74 percentile in JEE Mains among 1.5 million candidates}
+ \resumeSubHeadingListEnd
+ 
+%-------------------------------------------
+\end{document}
+
